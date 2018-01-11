@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JQueryDemo</title>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#button2").click(function(){
+        $("p").toggle();
+    });
+});
+
+$(document).ready(function(){
+    $("#plus").click(function(){
+        $("img").animate({
+            
+            opacity: '0.5',
+            height: '+=150px',
+            width: '+=150px'
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#minus").click(function(){
+        $("img").animate({
+            
+            opacity: '0.1',
+            height: '-=150px',
+            width: '-=150px'
+        });
+    });
+});
+</script>
+</head>
+<body>
+<div align="left" class="col-lg-6" >
+
+<img src="Images\\flower.jpg" align="left" style="width: 50%;">
+<button id="plus" type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-plus"></span> Plus
+        </button>
+<button  id="minus" type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-minus"></span> Minus
+        </button>
+</div>
+
+<div align="right" class="col-lg-6" >
+<p>This is a paragraph with little content.</p>
+<p>This is another small paragraph.</p>
+<button id="button2"> show paragraphs</button>
+</div>
+</body>
+</html>
+
